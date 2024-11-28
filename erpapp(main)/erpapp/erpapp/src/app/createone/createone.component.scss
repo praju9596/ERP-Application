@@ -1,0 +1,40 @@
+.card{
+
+    margin:0 auto;
+    width: 500px;
+    display: grid;
+    place-content: center;
+    }
+    .card-body{
+        padding-left: 100px;
+        
+    }
+    
+    
+    
+    h1{
+        text-align:center;
+        display: grid;
+        justify-content: center;
+        
+    }
+    .container {
+        
+        padding-top: 80px;
+        
+        
+        margin: auto;
+        display:felx;
+        place-content: center;
+    
+    }
+    .email.ng-invalid.ng-touched{
+        border: red 1px solid;
+    }
+    .pass.ng-invalid.ng-touched{
+        border: red 1px solid;
+    }
+    .card-title{
+        text-align: center;
+        top:10px;
+    }

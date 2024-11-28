@@ -1,0 +1,68 @@
+
+  <body >
+    <div><link rel="stylesheet" href=""></div>
+  
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+      <mat-card fxFlex="50">
+        <mat-toolbar color="primary"  fxLayoutAlign="center center">USER</mat-toolbar>
+          <form fxLayoutAlign="stretch" fxLayout="column" class="userlist-form" [formGroup]="UserForm " (ngSubmit)="userUpdate()">
+  
+            
+              <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput type= "User Name" placeholder="User Name" formControlName="Name">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="UserForm.get('Name').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+  
+              <mat-form-field  appearance="outline">
+                <mat-label>User Role</mat-label>
+                <input matInput type= "User Role" placeholder="User Role" formControlName="Role">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="UserForm.get('Role').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+
+              <mat-form-field  appearance="outline">
+                <mat-label>User Designation</mat-label>
+                <input matInput type= "User Designation" placeholder="User Designation" formControlName="Designation">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="UserForm.get('Designation').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label> Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="Password">
+                <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button> -->
+              </mat-form-field>
+
+              
+            
+            <mat-form-field appearance="outline">
+              <mat-label>Confirm password</mat-label >
+              <input matInput [type]="hide1 ? 'password' : 'text'" placeholder="Confirm password" formControlName="ConfirmPassword">
+              <!-- <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+                <mat-icon>{{hide1? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button> -->
+            </mat-form-field>
+            
+            <div mat-dialog-action [align]="'center'">
+                <button mat-raised-button color="warn" routerLink="/master/userlist" >Close</button>
+                <button style="margin-left: 10px;" mat-raised-button color="primary" type="submit">Update</button>
+              </div>
+            </form>
+            </mat-card>
+    
+  
+              </div> 
+  
+  </body>
+  
+  

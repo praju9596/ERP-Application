@@ -1,0 +1,56 @@
+<!-- <mat-toolbar color="primary">
+    <div class="container">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>question_answer</mat-icon>
+    </button>
+    <span> ADD ROLES </span>
+  </div>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="warn" >Logout </button>
+  </mat-toolbar> -->
+  <body >
+    <div><link rel="stylesheet" href=""></div>
+  
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div" style="margin-bottom: 50%;">
+      <mat-card fxFlex="50">
+        <mat-toolbar color="primary"  fxLayoutAlign="center center" >ADD CATEGORY</mat-toolbar>
+          <form fxLayoutAlign="stretch" fxLayout="column" class="enquiry-form" [formGroup]="addcategory" (ngSubmit)="upadatecategory()">
+              <mat-form-field appearance="outline" style="margin-top: 5px;">
+                <mat-label formControlName="id">CATEGORY ID</mat-label>
+                <input matInput type="Roles Id" placeholder="Roles Id" required>
+                
+              </mat-form-field>
+            
+              <mat-form-field appearance="outline">
+                <mat-label>CATEGORY Name</mat-label>
+                <input matInput type= "Roles Name" placeholder="CATEGORY Name" required formControlName="Name">
+                <mat-error *ngIf="addcategory.get('Name').hasError('required')">
+                  <b>Required</b>
+                </mat-error>
+
+                  <mat-error *ngIf="addcategory.get('Name').hasError('pattern')">
+                    <b>Name Should Contain Only Alphanumeric</b>
+                </mat-error>
+
+              
+
+              </mat-form-field>
+  
+              <mat-form-field  appearance="outline">
+                <mat-label>CATEGORY Description</mat-label>
+                <input matInput type= "CATEGORY description" placeholder="CATEGORY Description" formControlName="Description">
+              </mat-form-field>
+              <div mat-dialog-action [align]="'center'">
+                <button mat-raised-button color="warn" routerLink="/master/categorylist" >Close</button>
+                <button type="submit "style="margin-left: 10px;" mat-raised-button color="primary">Save</button>
+              </div>
+            </form>
+          
+             
+            
+      </mat-card>
+       
+              </div>
+            
+            
+  </body>

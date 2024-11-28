@@ -1,0 +1,69 @@
+
+<p>
+    <!-- <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+      </button>
+      <span>ROLES</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button color="warn" >Logout </button>
+    </mat-toolbar> -->
+
+    <span style="text-align: center;font-weight: bold;"><h1>ROLES LISTS</h1></span>
+
+  </p>
+  
+  <p class="bttn">
+    <button mat-raised-button color="primary" routerLink="/master/roleslist/addroles">Add Roles</button>
+  </p>
+<mat-form-field class="sort" >
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
+    
+  </mat-form-field>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" >
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Roles id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef> Roles name </th>
+        <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef> Roles desc </th>
+        <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action </th>
+        <td mat-cell *matCellDef="let element"> 
+          
+          <button mat-icon-button color="primary"  routerLink="/master/roleslist/updateroles/updateroles/{{element.id}}">
+            <mat-icon>edit</mat-icon>
+          </button> 
+          <button mat-icon-button color="warn" (click)="deleteroles(element.id)">
+            <mat-icon>delete</mat-icon>
+          </button>  
+        </td>
+      </ng-container>
+      
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>

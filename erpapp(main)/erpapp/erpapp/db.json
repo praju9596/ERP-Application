@@ -1,0 +1,239 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "roles": [
+    {
+      "Name": "Nisgh",
+      "Description": "kjjw34",
+      "id": 2
+    },
+    {
+      "Name": "",
+      "Description": "",
+      "id": 3
+    },
+    {
+      "Name": "nagesh",
+      "Description": "frjkn",
+      "id": 4
+    },
+    {
+      "Name": "nagesh",
+      "Description": "frjkn",
+      "id": 5
+    },
+    {
+      "Name": "erj",
+      "Description": "ekdf",
+      "id": 6
+    },
+    {
+      "Name": "ekmdke",
+      "Description": "mdfkrmk",
+      "id": 7
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 8
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 9
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 10
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 11
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 12
+    },
+    {
+      "Name": "ndjn",
+      "Description": "nejfn",
+      "id": 13
+    }
+  ],
+  "subcategory": [
+    {
+      "Name": "nish",
+      "Description": "lkhfio4ho",
+      "id": 3
+    }
+  ],
+  "enqirymode": [
+    {
+      "Name": "Testing",
+      "Description": "for testing purpose",
+      "id": 4
+    }
+  ],
+  "bussiness": [
+    {
+      "Name": "nagesh",
+      "desc": "jbkhk",
+      "id": 2
+    }
+  ],
+  "visitplan": [
+    {
+      "customername": "",
+      "address": "",
+      "location": "",
+      "cityName": "",
+      "refBy": "",
+      "bussinessType": "",
+      "product": "",
+      "date": "",
+      "date1": "",
+      "nextDate": "",
+      "saleEng": "",
+      "id": 1
+    },
+    {
+      "customername": "nvhkg",
+      "address": "bvkhhkh",
+      "location": "mvjhv",
+      "cityName": "jggk",
+      "refBy": "jgjhg",
+      "bussinessType": "jkj",
+      "product": "hgfhfu",
+      "date": "2023-09-04T18:30:00.000Z",
+      "date1": "2023-09-04T18:30:00.000Z",
+      "nextDate": "",
+      "saleEng": "mnjh",
+      "id": 2
+    }
+  ],
+  "employee": [
+    {
+      "employeeName": "bid",
+      "address": "khjh knqkh",
+      "city": "ih",
+      "country": "India",
+      "pincode": "541154",
+      "phone": "",
+      "contact": "0748779794",
+      "email": "kkpraj@gmail.com",
+      "pan": "AAAPZ1234C",
+      "phone1": ",mrkjerjk",
+      "aadhaar": "8687687",
+      "tempAddress": "khjh knqkh",
+      "tempCity": "ih",
+      "tempCountry": "India",
+      "tempPincode": "541154",
+      "id": 2
+    }
+  ],
+  "EnquiryList": [
+    {
+      "Name": "jkj",
+      "Id": "",
+      "Desc": "kjg",
+      "id": 1
+    }
+  ],
+  "UserList": [
+    {
+      "Name": "nish",
+      "Role": "ejwe",
+      "Designation": "kegklwe",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 3
+    }
+  ],
+  "CustomerList": [
+    {
+      "Name": "nag",
+      "ContactName": "Nish",
+      "ContactNo": null,
+      "Email": "nagesh.chennakeshava@gmail.com",
+      "GSTNo": null,
+      "CINNo": "",
+      "Address": "khjh",
+      "Area": "hjh",
+      "City": "ih",
+      "Country": "India",
+      "Pincode": "541154",
+      "tempAddress": "khjh",
+      "tempArea": "hjh",
+      "tempCity": "ih",
+      "tempCountry": "India",
+      "tempPincode": "541154",
+      "id": 1
+    }
+  ],
+  "SupplierList": [
+    {
+      "Id": "",
+      "Name": "jkgjhgjh",
+      "ContactName": "Nagesh C",
+      "ContactNo": "987698289",
+      "Email": "nagesh.chennakeshava@gmail.com",
+      "GSTNo": "6262",
+      "CINNo": "",
+      "Address": "khjh",
+      "Area": "HEZRH",
+      "City": "ih",
+      "Country": "India",
+      "Pincode": "541154",
+      "tempAddress": "khjh",
+      "tempArea": "HEZRH",
+      "tempCity": "ih",
+      "tempCountry": "India",
+      "tempPincode": "541154",
+      "id": 3
+    }
+  ],
+  "status": [
+    {
+      "Name": "p",
+      "Description": " mx ",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "Name": "m",
+      "Description": "mskmc",
+      "id": 1
+    },
+    {
+      "Name": "",
+      "Description": "",
+      "id": 2
+    }
+  ],
+  "designation": [
+    {
+      "Name": "jc",
+      "Description": "djj",
+      "id": 1
+    }
+  ]
+}

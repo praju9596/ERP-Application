@@ -1,0 +1,85 @@
+<div class="container1">
+    <body >
+   <div class="conatiner" fxLayoutAlign="center center" fxFlexFill class="main-div">
+       <mat-card fxFlex="50">
+         <mat-toolbar color="primary"  fxLayoutAlign="center center">Follow Up</mat-toolbar>
+           <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+             <div class="row" > 
+               <mat-form-field class="col" appearance="outline">
+                 <mat-label>Customer Name</mat-label>
+                 <input matInput type="Customer Name" placeholder="Customer name"  >
+               </mat-form-field> 
+               <mat-form-field class="col" appearance="outline">
+                 <mat-label>Location/Area</mat-label>
+                 <input matInput type= "Location/Area" placeholder="Location/Area">
+               </mat-form-field>
+               </div> 
+            <mat-form-field class="col" appearance="outline">
+                 <mat-label>Address</mat-label>
+                 <textarea matInput="Address" placeholder="Address"></textarea>
+               </mat-form-field>
+               <div class="row">
+                  <mat-form-field  class="col" appearance="outline">
+                 <mat-label>City</mat-label>
+                 <input matInput type= "City" placeholder="City">
+               </mat-form-field>
+               
+               <mat-form-field  class="col" appearance="outline">
+                 <mat-label>Ref By</mat-label>
+                 <input matInput type= "Ref By" placeholder="Ref By">
+               </mat-form-field></div>
+                
+                <div class="row">
+               <mat-form-field appearance="outline">
+                 <mat-label>Bussiness Type</mat-label>
+                 <input matInput type= "Bussiness" placeholder="Bussiness">
+               </mat-form-field>
+               
+               <mat-form-field  class="col" appearance="outline">
+               <mat-label>Product</mat-label>
+               <input matInput type= "Product" placeholder="Product">
+             </mat-form-field>
+           </div>
+   
+           <mat-form-field appearance="outline">
+             <mat-label>Visited Date</mat-label>
+             <input matInput [matDatepicker]="picker">
+             
+             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+             <mat-datepicker #picker></mat-datepicker>
+           </mat-form-field>
+           
+           <mat-form-field color="accent" appearance="outline">
+             <mat-label>Next Planned Date</mat-label>
+             <input matInput [matDatepicker]="picker2">
+             
+             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+             <mat-datepicker #picker2 color="primary"></mat-datepicker>
+           </mat-form-field>
+             
+             <div class="row">
+               <mat-form-field class="col" appearance="outline">
+               <mat-label>Sales Engineering</mat-label>
+               <input matInput type= "Product" placeholder="Sales Engineering">
+             </mat-form-field>
+             <mat-form-field class="col" appearance="outline">
+               <mat-label>Remarks</mat-label>
+               <input matInput type= "Address" placeholder="Address" >
+             </mat-form-field>
+   
+             </div>
+    
+             
+             <p style="margin-left:30% ;">
+               <button mat-raised-button color="primary"style="margin-right: 10px;">Save</button>
+               <button mat-raised-button color="warn" routerLink="/visitplan">Cancel</button>
+   
+             </p>
+             
+                
+             </form>
+             
+       </mat-card>
+   </div>
+   </body>
+   </div>  

@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="card drop-box"  >
+      <h1 class="card-title fw-boLd ">REGISTRATION</h1>
+      <hr>
+      <div class="card-body ">
+        <form action="" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()"  >
+        <div class="row pl-5 ">
+          <div class="md-3 mt-2 ">
+              <label for=""> Email:</label>
+          </div>
+  
+          <div class="form-group col-md-10 mt-2 ">
+              <input type="text" name="email" id="email" class="email form-control" formControlName="email" >
+              <div *ngIf="reactiveForm.get('email').hasError('required') && reactiveForm.get('email').touched" class="alert alert-danger">
+                Email is required.
+              </div>
+              <div *ngIf="reactiveForm.get('email').hasError('email') && reactiveForm.get('email').touched" class="alert alert-danger">
+                Invalid email format.
+              </div>
+          
+          
+            </div>
+  
+        </div>
+        <div class="row ">
+          <div class="md-3 mt-4">
+              <label for="">Password:</label>
+          </div>
+  
+          <div class="form-group col-md-10 mt-2  ">
+              <input  [type]="changetype?'password':'text'" type="password" name="password" id="password" class=" pass form-control"  formControlName="password">
+              <span class="eyeicon" (click)="veiwpass()"> <i class="eye" [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i> </span>
+              <div *ngIf="reactiveForm.get('password').hasError('required') && reactiveForm.get('password').touched" class="alert alert-danger">
+                password is required.
+              </div>
+              <div *ngIf="reactiveForm.get('password').hasError('pattern') && reactiveForm.get('password').touched" class="alert alert-danger">
+                Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.
+              </div>
+            </div>
+          </div>
+        <div class="row ">
+          <div class="mt-4">
+              <label for="">Confirm Password:</label>
+          </div>
+  
+          <div class="form-group mt-2 col-10">
+              <input  [type]="changetype1?'password':'text'" type="password" name="confirmpassword" id="email" class="pass form-control" formControlName="confirmpassword"  >
+              <span class="eyeicon" (click)="veiwpass1()"> <i class="eye" [ngClass]="visible1?'fa fa-eye':'fa fa-eye-slash'" ></i> </span>
+          </div>
+          <div *ngIf="reactiveForm.get('confirmpassword').hasError('required') && reactiveForm.get('confirmpassword').touched" class="alert alert-danger">
+            password is required.
+          </div>
+          <div *ngIf="reactiveForm.get('confirmpassword').hasError('pattern') && reactiveForm.get('confirmpassword').touched" class="alert alert-danger">
+            Password must be at least 8 characters long and include at least one uppercase letter, one Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character. lowercase letter, one number, and one special character.
+          </div>
+  
+        </div>
+  
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <button [disabled]="reactiveForm.invalid" class=" btn btn-primary">Register</button>
+          </div>
+          <div class="col-md-4">
+            <button routerLink="/"  class=" btn btn-secondary">Cancel</button>
+          </div>
+            
+        </div>
+      </form>
+        
+      </div>
+    </div>
+  
+  </div>
+      
+  

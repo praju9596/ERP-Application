@@ -1,0 +1,51 @@
+<!-- <mat-toolbar color="primary">
+  <div class="container">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>question_answer</mat-icon>
+  </button>
+  <span>Business Type</span>
+</div>
+  <span class="example-spacer"></span>
+  <button mat-raised-button color="warn" >Logout </button>
+</mat-toolbar> -->
+<body >
+
+  <div><link rel="stylesheet" href=""></div>
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="40">
+      <mat-toolbar color="primary"  fxLayoutAlign="center center">BUSINESS TYPE</mat-toolbar>
+
+        <form fxLayoutAlign="stretch" fxLayout="column" class="business-form" [formGroup]="BusinessForm" (ngSubmit)="onSubmit()">
+
+           
+          
+            <mat-form-field appearance="outline">
+              <mat-label>Business Type Name</mat-label>
+              <input matInput type= "Business Type Name" placeholder="Business Type Name" formControlName="Name">
+              <!-- <mat-hint align="end"></mat-hint> -->
+              <mat-error *ngIf="BusinessForm.get('Name').hasError('required')">
+                <b>Required</b>
+                  </mat-error>
+            </mat-form-field>
+            
+
+            <mat-form-field  appearance="outline">
+              <mat-label>Business Type Description</mat-label>
+              <input matInput type= "Business Type Description" placeholder="Business Type Description" formControlName="desc">
+              <mat-hint align="end"></mat-hint>
+            </mat-form-field>
+            <div mat-dialog-action [align]="'center'">
+              <button mat-raised-button color="warn" type="button" routerLink="/master/businesslist/" >Close</button>
+              <button style="margin-left: 10px;" mat-raised-button color="primary">Save</button>
+            </div>
+          </form>
+          
+           
+          
+    </mat-card>
+     
+            </div>
+          
+          
+</body>

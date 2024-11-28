@@ -1,0 +1,65 @@
+/* Base styles for h1 and .card */
+h1 {
+    text-align: center;
+}
+
+.card {
+    width: 100%; /* Make the card width adapt to the screen width */
+    max-width: 500px; /* Set a maximum width for larger screens */
+    margin: 2% auto;
+    position: relative;
+    -webkit-box-shadow: -23px 26px 56px -3px rgba(103, 83, 83, 0.75);
+    -moz-box-shadow: -23px 26px 56px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: -23px 26px 56px -3px rgba(0, 0, 0, 0.75);
+}
+
+/* Styles for the <hr> element */
+hr {
+    color: blue;
+}
+
+/* Responsive adjustments for columns */
+.col-3 {
+    margin-top: 5%;
+}
+
+.col-2 {
+    margin-top: 5%;
+    align-items: end;
+}
+
+/* Responsive adjustments for form fields with ng-invalid and ng-touched classes */
+.name.ng-invalid.ng-touched,
+.email.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Adjust the maximum width for smaller screens */
+    }
+}
+.form-label{
+    font-size: large;
+}
+
+.form-control{
+    font-size: larger;
+    font-weight: 300;
+    
+
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+    .card {
+        max-width: 95%; /* Further adjust maximum width for very small screens */
+    }
+
+    /* Center-align columns for small screens */
+    .col-3,
+    .col-2 {
+        text-align: center;
+    }
+}

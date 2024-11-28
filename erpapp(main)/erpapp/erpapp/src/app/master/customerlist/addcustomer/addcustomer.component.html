@@ -1,0 +1,183 @@
+<div>
+  <body >
+    <div><link rel="stylesheet" href=""></div>
+  
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+      <mat-card fxFlex="60">
+        <mat-toolbar color="primary"  fxLayoutAlign="center center">CUSTOMER </mat-toolbar>
+
+          <form fxLayoutAlign="stretch" fxLayout="column" class="custlist-form" [formGroup]="CustomerForm" (ngSubmit)="onSubmit()">
+  
+            
+              
+            
+              <mat-form-field appearance="outline">
+                <mat-label>Customer Name</mat-label>
+                <input matInput type= "Customer Name" placeholder="Customer Name" formControlName="Name">
+                <mat-hint [align]="'end'"></mat-hint>
+                <mat-error *ngIf="CustomerForm.get('Name').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+            
+  
+            <div class="row">
+              
+              <mat-form-field class="col" appearance="outline">
+                <mat-label>Customer Contact Name</mat-label>
+                <input matInput type= "Customer Contact Name" placeholder="Customer Contact Name" formControlName="ContactName">
+                <mat-hint [align]="'end'"></mat-hint>
+                <mat-error *ngIf="CustomerForm.get('ContactName').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+            
+  
+            
+              <mat-form-field class="col" appearance="outline">
+                <mat-label>Customer Contact No</mat-label>
+                <input matInput type= "Customer Contact No" placeholder="Customer Contact No" formControlName="ContactNo">
+                <mat-hint [align]="'end'"></mat-hint>
+                <mat-error *ngIf="CustomerForm.get('ContactNo').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+            </div>
+            
+  
+              <mat-form-field  appearance="outline">
+                <mat-label>Customer Email</mat-label>
+                <input matInput type= "Customer Email" placeholder="Customer Email" formControlName="Email">
+                <mat-hint [align]="'end'"></mat-hint>
+                <mat-error *ngIf="CustomerForm.get('Email').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+  
+              <div class="row">
+                
+              <mat-form-field class="col" appearance="outline">
+                <mat-label>Customer GST No</mat-label>
+                <input matInput type= "Customer GST No" placeholder="Customer GST No" formControlName="GSTNo">
+                <mat-hint [align]="'end'"></mat-hint>
+                <mat-error *ngIf="CustomerForm.get('GSTNo').hasError('required')">
+                  <b>Required</b>
+                    </mat-error>
+              </mat-form-field>
+            
+  
+            
+              <mat-form-field class="col" appearance="outline">
+                <mat-label>Customer CIN No</mat-label>
+                <input matInput type= "Customer CIN No" placeholder="Customer CIN No"  formControlName="CINNo">
+                <mat-hint [align]="'end'"></mat-hint>
+              </mat-form-field>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6" style=" margin-top: 40px;">
+                  <mat-form-field class="field-full-width" appearance="outline">
+                      <mat-label> Address</mat-label>
+                      <textarea matInput placeholder="Ex. Enter the Address Here"  formControlName="Address"></textarea>
+                      <mat-error *ngIf="CustomerForm.get('Address').hasError('required')">
+                        <b>Required</b>
+                      </mat-error>
+                  </mat-form-field>
+  
+                  <mat-form-field class="field-full-width" appearance="outline">
+                    <mat-label> Area</mat-label>
+                    <input matInput placeholder="Ex. Area" value="" formControlName="Area" >
+                    <mat-error *ngIf="CustomerForm.get('Area').hasError('required')">
+                      <b>Required</b>
+                    </mat-error>
+                </mat-form-field>
+      
+                  <mat-form-field class="field-full-width" appearance="outline">
+                      <mat-label>City </mat-label>
+                      <input matInput placeholder="Ex. Bangalore" value="" formControlName="City" >
+                      <mat-error *ngIf="CustomerForm.get('City').hasError('required')">
+                        <b>Required</b>
+                          </mat-error>
+                  </mat-form-field>
+  
+                  <mat-form-field class="field-full-width" appearance="outline">
+                      <mat-label>Country </mat-label>
+                      <input matInput placeholder="Ex. India" value="" formControlName="Country"  >
+                      <mat-error *ngIf="CustomerForm.get('Country').hasError('required')">
+                        <b>Required</b>
+                          </mat-error>
+                  </mat-form-field>
+      
+                  <mat-form-field class="field-full-width" appearance="outline">
+                      <mat-label>Pin Code</mat-label>
+                      <input matInput placeholder="Ex. 560031" value="" formControlName="Pincode" >
+                      <mat-error *ngIf="CustomerForm.get('Pincode').hasError('required')">
+                        <b>Required</b>
+                          </mat-error>
+                  </mat-form-field>
+              </div>
+            
+      
+              <div class="col-md-6" style="border-left: 1px solid blue">
+               
+                <mat-checkbox class="example-margin" #checkbox (change)="temp(checkbox.checked)" > Same As Permanent Address</mat-checkbox>
+                <mat-form-field class="field-full-width" appearance="outline">
+                  <mat-label> Address</mat-label>
+                  <textarea matInput placeholder="Ex. Enter the Address Here"  formControlName="tempAddress"></textarea>
+                  <mat-error *ngIf="CustomerForm.get('tempAddress').hasError('required')">
+                    <b>Required</b>
+                  </mat-error>
+              </mat-form-field>
+  
+                  <mat-form-field class="field-full-width" appearance="outline">
+                    <mat-label> Area</mat-label>
+                    <input matInput placeholder="Ex. Area" value=""  formControlName="tempArea" >
+                    <mat-error *ngIf="CustomerForm.get('tempArea').hasError('required')">
+                      <b>Required</b>
+                    </mat-error>
+                </mat-form-field>
+      
+                  <mat-form-field class="field-full-width" appearance="outline">
+                    <mat-label>City </mat-label>
+                      <input matInput placeholder="City" value="" formControlName="tempCity">
+                      <mat-error *ngIf="CustomerForm.get('tempCity').hasError('required')">
+                        <b>Required</b>
+                      </mat-error>
+                  </mat-form-field>
+  
+                  <mat-form-field class="field-full-width" appearance="outline">
+                    <mat-label>Country </mat-label>
+                    <input matInput placeholder="Ex. India" value="" formControlName="tempCountry"  >
+                    <mat-error *ngIf="CustomerForm.get('tempCountry').hasError('required')">
+                      <b>Required</b>
+                        </mat-error>
+                </mat-form-field>
+      
+                <mat-form-field class="field-full-width" appearance="outline">
+                  <mat-label>Pin Code</mat-label>
+                  <input matInput placeholder="Ex. 560031" value="" formControlName="tempPincode" >
+                  <mat-error *ngIf="CustomerForm.get('tempPincode').hasError('required')">
+                    <b>Required</b>
+                      </mat-error>
+              </mat-form-field>
+      
+      
+              </div>
+                  
+              </div>
+               <div mat-dialog-action [align]="'center'">
+                <button mat-raised-button color="warn" routerLink="/master/customerlist" >Close</button>
+                <button style="margin-left: 10px;" mat-raised-button color="primary" type="submit">Save</button>
+              </div>
+            </form>
+            
+           
+            
+      </mat-card>
+  
+              </div> 
+  
+  </body>
+</div>
+  
+  

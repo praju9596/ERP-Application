@@ -1,0 +1,86 @@
+
+<div class="card">
+    <div class="card-body">
+      <h1>PROFILE</h1>
+      <hr>
+     <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div class>
+        <label for="validationCustom01" class="form-label">Name: </label>
+        <input type="text" name="name" class="form-control" id="validationCustom01" required formControlName="name" >
+        <div class="valid-feedback">Looks good!</div>
+        <div *ngIf="reactiveForm.get('name').hasError('required') && reactiveForm.get('name').touched" class="alert alert-danger">
+          name is required.
+        </div>
+       </div>
+       <br>
+        
+        <div class="form-group" >
+          <label for="gender" class="form-label">Gender: </label>
+          <select class="form-select" id="gender" name="gender" formControlName="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+          </select>
+          <div *ngIf="reactiveForm.get('gender').hasError('required') && reactiveForm.get('gender').touched" class="alert alert-danger">
+            gender is required.
+          </div>
+        </div>
+        <br>
+        
+        <div class="form-group">
+          <label for="validationCustom03" class="form-label">Contact: </label>
+          <input
+            type="text"
+            name="numbers"
+            placeholder="Enter ten digits..."
+            class="form-control"
+            autocomplete="off"
+            required
+            pattern="[0-9]{10}"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+            maxlength="10"
+            formControlName="contact"
+            
+          />
+          <div *ngIf="reactiveForm.get('contact').hasError('required') && reactiveForm.get('contact').touched" class="alert alert-danger">
+            contact is required.
+          </div>
+  
+        </div>
+        <br>
+    
+        <div class>
+          <label for="validationCustom03" class="form-label">Email id: </label>
+          <input class="email" class="form-control" name="email" id="validationCustom03" placeholder="Enter a valid email-id" formControlName="email">
+          <div *ngIf="reactiveForm.get('email').hasError('required') && reactiveForm.get('email').touched" class="alert alert-danger">
+            Email is required.
+          </div>
+          <div *ngIf="reactiveForm.get('email').hasError('email') && reactiveForm.get('email').touched" class="alert alert-danger">
+            Invalid email format.
+          </div>
+        </div>
+        <br>
+          
+      
+    
+        <div class>
+          <label for="validationCustom02" class="form-label">Designation: </label>
+          <input type="text" name="designation" class="form-control" id="validationCustom02" formControlName="designation" >
+          
+          <div *ngIf="reactiveForm.get('designation').hasError('required') && reactiveForm.get('designation').touched" class="alert alert-danger">
+            designation is required.
+          </div>
+        </div>
+        <br>
+    
+        <div class="col-10 d-flex justify-content-end">
+          <div class="col-3">
+            <button type="button"  [disabled]="reactiveForm.invalid" class="btn btn-primary" >Submit</button>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-secondary" routerLink="/dashboard">Cancel</button>
+          </div>
+        </div>
+      </form>
+     </div>
+    </div>

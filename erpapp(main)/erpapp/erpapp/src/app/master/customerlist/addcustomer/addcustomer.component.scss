@@ -1,0 +1,40 @@
+.main-div mat-card{
+    padding-top: 1%;
+}
+.custlist-form{
+    padding: 20px;
+    
+}
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 100vh;
+    
+}
+
+.marquee div{
+    font-size: 4rem;
+    font-family: Poppins;
+    padding-left: 10%;
+    background-color: black;
+    display: inline-block
+    
+}
+.example-spacer {
+    flex: 1 1 auto;
+  
+  }
+  .field-full-width{
+    width: 100%;
+  }
+  #add{
+    margin-top:42px;
+  }
+  /* Default styles for larger screens */
+.mat-card {
+    padding-left: 100px;
+  }
+  
+  
